@@ -4,7 +4,7 @@
 
 # Application mobile hybride Ionic3
 
-transport de colis de particuliers à particuliers 
+Suivre les votes des élections municipales.
 
 Ionic3, Angular6, Cordova, HTML5, SCSS, TypeScript, Firebase,API Facebook,API GooglePlus, API GoogleMap
 
