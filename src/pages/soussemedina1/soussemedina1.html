@@ -1,0 +1,194 @@
+
+
+<ion-content class="background">
+
+  <div style="width:500px;height:150px;"></div>
+
+
+  <button ion-button color="b2"  style="font-size:20px;font-weight:600"  medium  Default icon-only>  <ion-icon name="ios-analytics"></ion-icon>
+    <b>&nbsp;سوسة المدينة&nbsp;</b>
+    <ion-icon name="ios-analytics"></ion-icon>
+  </button>
+
+  <div style="width:500px;height:10px;"></div>
+
+  <ion-card>
+
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-select placeholder=" إسم المركز " [(ngModel)]="markez" [selectOptions]="PaysAlertOpts">
+          <ion-option> المدرسة الابتدائية الباب الشمالي سوسة </ion-option>
+          <ion-option> المدرسة ابتدائية  خزامة الشرقية سوسة </ion-option>
+          <ion-option> المدرسة الابتدائية التريكية سوسة </ion-option>
+          <ion-option> المدرسة الإبتدائية العمارات الشمالية سوسة </ion-option>
+          <ion-option> المدرسة الإعدادية طارق بن زياد خزامة الشرقية </ion-option>
+          <ion-option> المدرسة الإبتدائية العمارات الجنوبية سوسة </ion-option>
+          <ion-option (select)="stpSelect()">المدرسة الإبتدائية ابن خلدون سوسة</ion-option>
+        </ion-select>
+        <ion-icon name="ios-pin" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+
+      </ion-item>
+    </ion-list>
+
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-select placeholder=" رقم القاعة " [(ngModel)]="room" [selectOptions]="PaysAlertOpts1">
+          <ion-option> 1 </ion-option>
+          <ion-option> 2 </ion-option>
+          <ion-option> 3 </ion-option>
+          <ion-option> 4 </ion-option>
+          <ion-option> 5 </ion-option>
+          <ion-option> 6 </ion-option>
+          <ion-option> 7 </ion-option>
+          <ion-option> 8 </ion-option>
+          <ion-option (select)="stpSelect()">9</ion-option>
+        </ion-select>
+        <ion-icon name="ios-beaker" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
+
+  <div style="width:500px;height:30px;"></div>
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a1" placeholder="08h - 09h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked1(a1,room,markez)" (click)="doAlert()" (click)="clearinput1()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a2" placeholder="09h - 10h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked2(a2,room,markez)" (click)="doAlert()" (click)="clearinput2()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a3" placeholder="10h - 11h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked3(a3,room,markez)" (click)="doAlert()" (click)="clearinput3()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a4" placeholder="11h - 12h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked4(a4,room,markez)" (click)="doAlert()" (click)="clearinput4()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a5" placeholder="12h - 13h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked5(a5,room,markez)" (click)="doAlert()" (click)="clearinput5()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a6" placeholder="13h - 14h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked6(a6,room,markez)" (click)="doAlert()" (click)="clearinput6()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a7" placeholder="14h - 15h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked7(a7,room,markez)" (click)="doAlert()" (click)="clearinput7()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a8" placeholder="15h - 16h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked8(a8,room,markez)" (click)="doAlert()" (click)="clearinput8()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a9" placeholder="16h - 17h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked9(a9,room,markez)" (click)="doAlert()" (click)="clearinput9()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a10" placeholder="17h - 18h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked10(a10,room,markez)" (click)="doAlert()" (click)="clearinput10()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+
+  <ion-card class="b1">
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a11" placeholder="18h - 19h" ></ion-input>
+      </ion-col>
+      <ion-col>
+        <button color="b2" ion-button style="font-size:14px;font-weight:600" small (click)="btnAddClicked11(a11,room,markez)" (click)="doAlert()" (click)="clearinput11()" icon-only >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <button ion-button color="dark"Default  small navPop><ion-icon name="md-return-left"></ion-icon><b>&nbsp;رجوع&nbsp;</b></button>
+
+
+</ion-content>

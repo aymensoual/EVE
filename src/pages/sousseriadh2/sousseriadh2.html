@@ -1,0 +1,349 @@
+
+
+<ion-content class="background">
+
+  <div style="width:500px;height:140px;"></div>
+
+  <button ion-button color="light" full  style="font-size:20px;font-weight:600;"  medium  Default icon-only>  <ion-icon name="ios-reorder"></ion-icon>
+    <b>&nbsp;سوسة الرياض&nbsp;</b>
+    <ion-icon name="ios-reorder"></ion-icon>
+  </button>
+  <div style="width:500px;height:10px;"></div>
+
+
+  <ion-card>
+    <ion-card class="ground">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-select placeholder=" إسم المركز " [(ngModel)]="markez" [selectOptions]="PaysAlertOpts">
+          <ion-option> المدرسة الابتدائية الرياض الخامس </ion-option>
+          <ion-option> المدرسة الابتدائية الفتح </ion-option>
+          <ion-option>المدرسة الابتدائية طارق إبن زياد</ion-option>
+          <ion-option> المدرسة الابتدائية الأمل </ion-option>
+          <ion-option> المدرسة الابتدائية إبن شرف </ion-option>
+          <ion-option> المدرسة الابتدائية النجاح </ion-option>
+          <ion-option (select)="stpSelect()">المدرسة الابتدائية السلام</ion-option>
+        </ion-select>
+        <ion-icon name="ios-pin" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+      </ion-item>
+    </ion-list>
+    </ion-card>
+
+      <ion-card class="ground">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-select placeholder=" رقم القاعة " [(ngModel)]="room" [selectOptions]="PaysAlertOpts1">
+          <ion-option> 1 </ion-option>
+          <ion-option> 2 </ion-option>
+          <ion-option> 3 </ion-option>
+          <ion-option> 4 </ion-option>
+          <ion-option> 5 </ion-option>
+          <ion-option> 6 </ion-option>
+          <ion-option> 7 </ion-option>
+          <ion-option (select)="stpSelect()">8</ion-option>
+        </ion-select>
+        <ion-icon name="ios-beaker" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+        <ion-icon name="" item-left></ion-icon>
+      </ion-item>
+    </ion-list>
+      </ion-card>
+    <ion-card class="ground">
+
+      <ion-list no-lines>
+        <ion-item>
+          <ion-select placeholder=" رقم الصندوق " [(ngModel)]="boite" [selectOptions]="PaysAlertOpts2">
+            <ion-option> 1 </ion-option>
+            <ion-option (select)="stpSelect()">2</ion-option>
+          </ion-select>
+          <ion-icon name="ios-cube" item-left></ion-icon>
+          <ion-icon name="" item-left></ion-icon>
+          <ion-icon name="" item-left></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </ion-card>
+
+  <div style="width:500px;height:30px;"></div>
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/2.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;1  حركة نداء تونس&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a2" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked2(markez,room,boite,a2)" (click)="doAlert()" (click)="clearinput2()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/3.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;2  حركة النهضة&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a3" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked3(markez,room,boite,a3)" (click)="doAlert()" (click)="clearinput3()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/4.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;3  التيار الديمقراطي&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a4" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked4(markez,room,boite,a4)" (click)="doAlert()" (click)="clearinput4()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/5.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;4  بني وطني&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a5" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked5(markez,room,boite,a5)" (click)="doAlert()" (click)="clearinput5()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/6.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;5  سوسة قول وفعل&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a6" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked6(markez,room,boite,a6)" (click)="doAlert()" (click)="clearinput6()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/7.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;6  حضر موت&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a7" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked7(markez,room,boite,a7)" (click)="doAlert()" (click)="clearinput7()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/8.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;7  الجبهة الشعبية&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a8" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked8(markez,room,boite,a8)" (click)="doAlert()" (click)="clearinput8()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/9.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;8  سواعد سوسة&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a9" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked9(markez,room,boite,a9)" (click)="doAlert()" (click)="clearinput9()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/10.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;9  كلنا لسوسة&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a10" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked10(markez,room,boite,a10)" (click)="doAlert()" (click)="clearinput10()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/11.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;10  الحزب الحر الدستوري&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a11" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked11(markez,room,boite,a11)" (click)="doAlert()" (click)="clearinput11()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/12.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;11  أحرار تونس&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a12" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked12(markez,room,boite,a12)" (click)="doAlert()" (click)="clearinput12()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/1.ico">
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;12 سوسة للجميع&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>        <ion-card style="background-color:white" >
+      <ion-input type="number" pattern="[0-9]*" [(ngModel)]="a1" placeholder="الرقم" ></ion-input>
+    </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked1(markez,room,boite,a1)" (click)="doAlert()" (click)="clearinput1()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/13.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;13  عزالبلاد&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a13" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked13(markez,room,boite,a13)" (click)="doAlert()" (click)="clearinput13()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card class="ground">
+    <div style="width:500px;height:5px;"></div>
+    <img class="one" src="assets/imgs/14.ico" />
+    <ion-card-content>
+      <button ion-button color="light" outline full small style="font-size:20px;font-weight:600;color: black"  medium  Default icon-only>  <ion-icon name="ios-finger-print"></ion-icon>
+        <b>&nbsp;14  الإقلاع&nbsp;</b>
+        <ion-icon name="ios-finger-print"></ion-icon>
+      </button>
+      <ion-card style="background-color:white" >
+        <ion-input  type="number" pattern="[0-9]*" [(ngModel)]="a14" placeholder="الرقم" ></ion-input>
+      </ion-card>
+      <button ion-button color="b1" style="font-weight:600;font-size:20px"  round (click)="btnAddClicked14(markez,room,boite,a14)" (click)="doAlert()" (click)="clearinput14()" icon-only medium>
+        &nbsp; &nbsp; &nbsp;  إرسال &nbsp; &nbsp; &nbsp;
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <button ion-button color="dark"Default  small navPop><ion-icon name="md-return-left"></ion-icon><b>&nbsp;رجوع&nbsp;</b></button>
+
+
+</ion-content>

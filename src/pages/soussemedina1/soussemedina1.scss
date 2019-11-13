@@ -1,0 +1,28 @@
+page-soussemedina1 {
+  .background {
+    background-image: url('../assets/imgs/f3.png');
+    background-size: 100% 100%;
+  }
+
+  .scroll-content {
+    text-align: center;
+  }
+  ion-card.b1 {
+    background-color: #dfffe7;
+    border-radius: 10px;
+  }
+  ion-card.card {
+    border-radius: 10px;
+  }
+
+  input {
+    font-size: 12px;
+    font-family: Verdana;
+    font-Weight: Bold;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: black;
+  }
+}

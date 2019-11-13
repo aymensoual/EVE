@@ -1,0 +1,39 @@
+page-sousseabdlahmid1 {
+  .background {
+
+    background-image: url('../assets/imgs/f3.png');
+    background-size: 100% 100%;
+  }
+
+  .scroll-content {
+    text-align: center;
+  }
+  ion-card.card {
+    background: rgba(232, 230, 230, 0.9px);
+    border-radius: 10px;
+  }
+
+  ion-card.b1 {
+    border-radius: 10px;
+  }
+
+  input {
+    font-size: 12px;
+    font-family: Verdana;
+    font-Weight: Bold;
+  }
+
+  ion-card.card {
+    border-radius: 10px;
+  }
+
+  ion-card.b1 {
+    background-color: #f9ffe6;
+    border-radius: 10px;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: black;
+  }
+}
