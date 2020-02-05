@@ -14,9 +14,7 @@ Suivre les votes des élections municipales.
            * SCSS
            * TypeScript
            * Firebase
-           * API Facebook
-           * API GooglePlus
-           * API GoogleMap
+           
            
            
 
